@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>贵州高校春日数据图谱 2025</title>
+<style>
+/* ===== 全局基础 ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;color:#fff;}
+/* 移动端强制全屏禁止滚动，PC 允许默认滚动 */
+@media (max-width:768px){
+  html,body{height:100%;overflow:hidden;position:fixed;top:0;left:0;right:0;bottom:0;}
+  .swiper{touch-action:none;}
+}
+@media (min-width:769px){
+  html,body{height:auto;overflow:auto;position:static;}
+  .swiper{touch-action:auto;}
+}
+
+/* ===== 滑屏容器 ===== */
+.swiper{width:100%;height:100%;display:flex;transition:transform .6s;}
+section{flex:0 0 100%;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px;position:relative;}
+.bg{position:absolute;inset:0;z-index:-1;}
+
+/* ===== 字体大小自适应 ===== */
+h1{font-size:clamp(36px,8vw,80px);font-weight:900;letter-spacing:2px;}
+h2{font-size:clamp(24px,5vw,56px);font-weight:700;margin:10px 0 25px;}
+pre{font-size:clamp(20px,5vw,40px);line-height:1.6;white-space:pre-wrap;max-width:90vw;}
+.emoji{font-size:clamp(36px,8vw,80px);margin:0 4px;}
+.btn{margin-top:clamp(20px,8vw,60px);padding:clamp(12px,4vw,24px) clamp(24px,8vw,48px);border:none;border-radius:999px;background:#fff;color:#111;font-size:clamp(20px,5.5vw,36px);font-weight:700;cursor:pointer;box-shadow:0 0 8vw rgba(255,255,255,.25);}
+.note{position:absolute;bottom:4vw;font-size:clamp(12px,3vw,20px);opacity:.7;}
+
+/* ===== 弹幕词云 ===== */
+#cloudTitle{z-index:1;font-size:clamp(36px,8vw,80px);font-weight:900;color:#fff;text-shadow:0 0 4px #000,0 0 8px #fff;}
+#cloudWrap{position:absolute;inset:0;z-index:0;overflow:hidden;}
+@keyframes slideLeft{0%{transform:translateX(100vw);}100%{transform:translateX(-100vw);}}
+@keyframes slideRight{0%{transform:translateX(-100vw);}100%{transform:translateX(100vw);}}
+.word{position:absolute;white-space:nowrap;font-weight:700;font-size:clamp(24px,6vw,48px);color:#fff;text-shadow:0 0 1vw #000;animation-iteration-count:infinite;animation-timing-function:linear;}
+
+/* ===== 最后一页渐变文字 ===== */
+#seg,#card{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(22px,5.5vw,40px);line-height:1.8;max-width:85vw;text-align:center;transition:opacity .3s;}
+#seg{color:#fff;text-shadow:0 0 4px #000;}
+#card{opacity:0;transition:opacity .6s;}
+
+/* ===== PC 端左右按钮 ===== */
+@media (max-width:768px){#pcNav{display:none;}}
+#pcNav{position:fixed;top:50%;transform:translateY(-50%);z-index:999;display:flex;width:100%;justify-content:space-between;pointer-events:none;}
+#pcNav button{pointer-events:auto;background:rgba(0,0,0,.3);color:#fff;border:none;font-size:40px;width:60px;height:60px;border-radius:50%;cursor:pointer;margin:0 20px;transition:background .2s;}
+#pcNav button:hover{background:rgba(0,0,0,.6);}
+</style>
+</head>
+<body>
+<div class="swiper" id="swiper">
+
+<!-- 0 封面 -->
+<section>
+<div class="bg" style="background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%)"></div>
+<h1>🌸 贵州高校春日数据图谱</h1>
+<h2>49212 条匿名心声 · 5大青春真相</h2>
+<button class="btn" onclick="next()">👇 滑起来！</button>
+</section>
+
+<!-- 1 时事静音 -->
+<section>
+<div class="bg" style="background:linear-gradient(135deg,#a1c4fd 0%,#c2e9fb 100%)"></div>
+<h1>📰 时事静音</h1>
+<pre>
+<span class="emoji">🔇</span> 1237 条 · 2.5 %
+本科校均 0.7 条
+专科校均 0.3 条
+热点瞬闪：莎头夺冠 <span class="emoji">🏆</span> <br>甲亢哥闪现 <span class="emoji">🤳</span>
+“宏大叙事被折叠成指尖收藏”
+</pre>
+<button class="btn" onclick="next()">→</button>
+</section>
+
+<!-- 2 恋爱主场 -->
+<section>
+<div class="bg" style="background:linear-gradient(135deg,#ff9a9e 0%,#fad0c4 100%)"></div>
+<h1>💘 恋爱主场</h1>
+<pre>
+<span class="emoji">💗</span> 15 279 条 · 31 %
+师范浓度 35 %
+520 节点再冲峰
+“每 3 条投稿 1 条心动”
+</pre>
+<button class="btn" onclick="next()">→</button>
+</section>
+
+<!-- 3 学业修罗场 -->
+<section>
+<div class="bg" style="background:linear-gradient(135deg,#ffecd2 0%,#a18cd1 100%)"></div>
+<h1>📚 学业修罗场</h1>
+<pre>
+<span class="emoji">📈</span> 230 条显性求助
+考试周 = 流量海啸
+诈骗暗流：内部名额 · 论文代写
+“破防在小红书回血”
+</pre>
+<button class="btn" onclick="next()">→</button>
+</section>
+
+<!-- 4 情绪爆炸 -->
+<section>
+<div class="bg" style="background:linear-gradient(135deg,#a8edea 0%,#fed6e3 100%)"></div>
+<h1>😭 情绪爆炸</h1>
+<pre>
+<span class="emoji">💥</span> 9 273 条 · 18.9 %
+师范本科 178 条 / 校
+外卖被偷 · 深夜电话 · 图书馆喧哗
+</pre>
+<button class="btn" onclick="next()">→</button>
+</section>
+
+<!-- 5 校园烟火 -->
+<section>
+<div class="bg" style="background:linear-gradient(135deg,#d4fc79 0%,#96e6a1 100%)"></div>
+<h1>🔧 校园烟火</h1>
+<pre>
+<span class="emoji">🏡</span> 139 条 · 0.3 %
+失物招领 二手教材 宿舍养宠
+小红书春日帖 <span class="emoji">🌞</span> 30 % 高赞
+</pre>
+<button class="btn" onclick="next()">→</button>
+</section>
+
+<!-- 6 三大痛点 -->
+<section>
+<div class="bg" style="background:linear-gradient(135deg,#ffecd2 0%,#fcb69f 100%)"></div>
+<h1>🎯 三大痛点</h1>
+<pre>
+<span class="emoji">🚨</span> 就业焦虑 68 % 零offer
+<span class="emoji">⚠️</span> 考试+诈骗 出分日+47 %
+<span class="emoji">🔁</span> 单向吐槽循环 信任磨损
+</pre>
+<button class="btn" onclick="next()">→</button>
+</section>
+
+<!-- 7 弹幕词云 -->
+<section>
+<div class="bg" style="background:linear-gradient(135deg,#ff00cc 0%,#3333ff 100%)"></div>
+<h1 id="cloudTitle">🔥 弹幕词云墙</h1>
+<div id="cloudWrap"></div>
+<button class="btn" style="position:absolute;bottom:12vw;left:50%;transform:translateX(-50%);" onclick="next()">解锁人格证 →</button>
+</section>
+
+<!-- 8 春日人格证 -->
+<section id="personality-page" onclick="nextSeg()">
+<div class="bg" style="background:linear-gradient(135deg,#fddb92 0%,#d1fdff 100%)"></div>
+<div id="seg"></div>
+<div id="card">
+  <h1>🪪 春日人格证</h1>
+  <pre>🤐 闭口守线者<br>💘 为爱痴狂者<br>🌊 吞泪成河者</pre>
+</div>
+<div class="note">数据来源：2025.3-6 贵州79所高校匿名平台 49,212条青春样本</div>
+</section>
+
+</div>
+
+<!-- PC 端左右按钮 -->
+<div id="pcNav">
+  <button onclick="prev()">‹</button>
+  <button onclick="next()">›</button>
+</div>
+
+<script>
+/* ===== 通用滑屏 ===== */
+const swiper=document.getElementById('swiper');
+let idx=0;
+function move(){swiper.style.transform=`translateX(-${idx*100}%)`;}
+function next(){
+  idx=(idx+1)%document.querySelectorAll('section').length;
+  move();
+}
+function prev(){
+  idx=(idx-1+document.querySelectorAll('section').length)%document.querySelectorAll('section').length;
+  move();
+}
+
+/* 键盘/滚轮/触控 */
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev();});
+document.addEventListener('wheel',e=>{e.deltaY>0?next():prev();},{passive:true});
+document.addEventListener('touchstart',e=>window.x0=e.touches[0].clientX,false);
+document.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-window.x0;
+  Math.abs(dx)>50&&(dx>0?prev():next());
+},false);
+
+/* ===== 弹幕词云 ===== */
+const wordList=[
+  '考研💣','教资📚','失恋💔','捞人📲','外卖被偷🍱','图书馆喧哗🤫','零offer😵‍💫','专升本⬆️','520🌹','甲亢哥🤳','莎头🏆','飞虫宿舍🪰','空调🔥','樱花打卡🌸','二手教材📖','宵禁🕛','校招👔','代写论文🚫',
+  '深夜电话☎️','考研资料📄','考编📋','炸裂室友💥','实习内推📧','考研复试🎤','教资面试🧑‍🏫','考研政治📜','考研英语📘','考研数学✏️','宿舍空调❄️','图书馆抢座💺','外卖柜🥡','快递丢失📦','考研上岸🎉','毕业分手🥲','考研二战🔄','考研调剂🪜','考研复试线📊','考研国家线📈',
+  '深夜emo🌌','深夜外卖🍔','深夜学习🦉','深夜赶due📅','深夜刷题🧮','深夜追剧📺','深夜打游戏🎮','深夜聊天📲','毕业论文📑','开题报告📄','文献综述📚','论文查重🔍','论文降重📉','论文答辩🎤','论文致谢🙏','论文格式🖨️','论文盲审🙈','论文抽检🎰',
+  '考研寄宿🏫','考研自习室🪑','考研台灯💡','考研计时器⏱️','考研日历📆','考研倒计时🗓️','考研打卡📍','考研flag🚩','考研玄学🪄','考研好运🍀','教资体检🏥','教资认定✅','教资注册🆔','教资拿证🎊','教资备考📖','教资刷题🧩','教资笔记🗒️','教资网课💻','教资押题🎯','教资真题📑',
+  '校招笔试🖋️','校招面试🎤','校招群面👥','校招单面🪞','校招HR💼','校招薪资💰','校招毁约🚫','校招三方📄','校招毁三方🚫','校招违约💸','实习周报📈','实习日报📅','实习月报📊','实习转正🔄','实习离职🚪','实习证明📄','实习鉴定🪪','实习导师👨‍🏫','实习同事👩‍💻','实习工资条💳',
+  '毕业照📸','毕业典礼🎓','毕业旅行✈️','毕业聚餐🍻','毕业租房🏠','毕业寄行李📦','毕业告白💌','毕业遗憾🥀','毕业快乐🎉','校园卡💳','校园网🌐','校园跑🏃‍♂️','校园卡丢失🪪','校园卡补办🔄','校园卡充值💳','校园网断网🚫','校园网续费💸','校园网卡顿🐌','校园网提速🚀','奖学金申请📝',
+  '奖学金答辩🎤','奖学金公示📋','奖学金到账💰','助学金申请📄','助学金公示📋','助学金到账💳','励志奖学金💪','国家奖学金🇨🇳','校级奖学金🎓','考研寄宿🏘️','考研公寓🏢','考研租房🏠','考研室友👥','考研早餐🍳','考研午餐🍱','考研晚餐🍜','考研夜宵🌮','考研咖啡☕','考研能量饮⚡','考研零食🍫'
+];
+const cloudWrap=document.getElementById('cloudWrap');
+wordList.forEach((w,i)=>{
+  const span=document.createElement('span');
+  span.textContent=w;
+  span.className='word';
+  span.style.top=10+Math.random()*80+'%';
+  span.style.animationName=i%2===0?'slideLeft':'slideRight';
+  const dur=window.innerWidth>768?(Math.random()*12+20):(Math.random()*8+12);
+  span.style.animationDuration=dur+'s';
+  span.style.animationDelay=Math.random()*3+'s';
+  cloudWrap.appendChild(span);
+});
+
+/* ===== 最后一页段落切换 ===== */
+const segs=[
+  '贵州的3-6月大学生们<br>像一颗破土的种子：<br>虽然沉默于风云🤐<br>但总在守护思想的根系；',
+  '虽然为爱痴狂🌹<br>却让玫瑰开满匿名荒原；',
+  '虽然吞下焦虑🌧️<br>但泪水终将汇成成长的河。',
+  '他们向往光的模样——<br>喜欢在清晨收集知识露水<br>也会在深夜丈量现实沟壑。',
+  '当压力如暴雨倾盆时，<br>总有不期而遇的星光：',
+  '是Crush的怦然心动<br>是代码跑通时的欢呼<br>是教案被学生接住的微笑',
+  '永远相信：<br>每一颗向下扎根的种子<br>终会遇见向上的晴天☀️',
+  '🤐 闭口守线者<br>💘 为爱痴狂者<br>🌊 吞泪成河者'
+];
+let segIdx=0;
+const seg=document.getElementById('seg');
+const card=document.getElementById('card');
+function nextSeg(){
+  if(segIdx>=segs.length) return;
+  seg.style.opacity=0;
+  setTimeout(()=>{
+    seg.innerHTML=segs[segIdx];
+    seg.style.opacity=1;
+    segIdx++;
+    if(segIdx===segs.length){
+      seg.style.display='none';
+      card.style.opacity=1;
+      document.getElementById('personality-page').onclick=null;
+    }
+  },300);
+}
+nextSeg();   // 首段出现
+</script>
+</body>
+</html>
